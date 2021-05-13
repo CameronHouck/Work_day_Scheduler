@@ -2,7 +2,7 @@ body {
   font-family: cursive;
   font-size: 18px;
   line-height: 3;
-  background-color: rgb(0, 225, 255);
+  background-color: rgb(10, 159, 245);
 }
 
 main {
@@ -44,15 +44,15 @@ main {
 }
 
 #gray-column {
-  background-color: gray;
+  background-color: #A9A9A9;
 }
 
 #red-column {
-  background-color: red;
+  background-color: #DC143C;
 }
 
 #green-column {
-  background-color: green;
+  background-color: #32CD32;
 }
 
 .sections {
