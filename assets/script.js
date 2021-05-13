@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
 });
 
-$(".timeslot").each(function () {
+$(".timearea").each(function () {
     var time = $(this).data("time"); 
     var now = moment().hour(); 
     if (time < now) {
@@ -52,3 +52,30 @@ $(".timeslot").each(function () {
         );
     }
   });
+
+  $(".editData").click(function (event) {
+    $("#eventDescription").val("");
+    var chosenTime = $(this).parent().siblings().prev().html();
+    $("#chosen-time").html(chosenTime);
+    var timeValue = $(this).parent().siblings().prev().data("time");
+    $("#chosen-time").attr("data-hourValue", timeValue);
+  });
+
+$("#saveBtn").click(function () { 
+    var eventInformation = $("#eventDescription").val(); 
+    var chosenTimeHTML = $(this)
+      .parent()
+      .siblings()
+      .prev()[1]
+      .querySelector("span");
+    var chosenTimeHTML = $(chosenTimeHTML);
+    var dataAttribute = chosenTimeHTML.attr("data-hourValue");
+    $(".eventInfo").each(function (i, object) {
+      var object = $(object);
+      if (object.attr("value") == dataAttribute) {
+        object.html(eventInformation);
+        setLocalStorage(dataAttribute, eventInformation);
+      }
+    });
+  });
+
