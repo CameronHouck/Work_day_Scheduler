@@ -12,11 +12,6 @@
 
 <body>
     <main>
-
-
-
-
-
         <header class="jumbotron">
             <h1 class="Title">Work Day Scheduler</h1>
             <h2 class="Title">Schedule up to 12 hours of work!</h2>
@@ -35,72 +30,90 @@
                 <tbody>
                     <tr>
                         <td class="timearea text-center" data-time="8" id="rowTest">8am - 9am </td>
-                        <td class="infoArea" value="8"></td>
+                        <td class="infoArea eventInfo" value="8"></td>
                         <td class="text-center"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="9">9am - 10am</td>
-                        <td class="infoArea" value="9"></td>
+                        <td class="infoArea eventInfo" value="9"></td>
                         <td class="text-center"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="10">10am - 11am</td>
-                        <td class="infoArea" value="10"></td>
+                        <td class="infoArea eventInfo" value="10"></td>
                         <td class="text-center"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="11">11am - 12pm</td>
-                        <td class="infoArea" value="11"></td>
+                        <td class="infoArea eventInfo" value="11"></td>
                         <td class="text-center"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="12">12pm - 1pm</td>
-                        <td class="infoArea" value="12"></td>
+                        <td class="infoArea eventInfo" value="12"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="13">1pm - 2pm</td>
-                        <td class="infoArea" value="13"></td>
+                        <td class="infoArea eventInfo" value="13"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="14">2pm - 3pm</td>
-                        <td class="infoArea" value="14"></td>
+                        <td class="infoArea eventInfo" value="14"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="15">3pm - 4pm</td>
-                        <td class="infoArea" value="15"></td>
+                        <td class="infoArea eventInfo" value="15"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="16">4pm - 5pm</td>
-                        <td class="infoArea" value="16"></td>
+                        <td class="infoArea eventInfo" value="16"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="17">5pm - 6pm</td>
-                        <td class="infoArea" value="17"></td>
+                        <td class="infoArea eventInfo" value="17"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="18">6pm - 7pm</td>
-                        <td class="infoArea" value="18"></td>
+                        <td class="infoArea eventInfo" value="18"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="19">7pm - 8pm</td>
-                        <td class="infoArea" value="19"></td>
+                        <td class="infoArea eventInfo" value="19"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                     <tr>
                         <td class="timearea text-center" data-time="20">8pm - 9pm</td>
-                        <td class="infoArea" value="20"></td>
+                        <td class="infoArea eventInfo" value="20"></td>
                         <td class="text-center edit-btn"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
+        <div class="modal fade" id="editEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit event Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">Time Chosen: <span id="chosen-time"></span></div>
+                    <div class="modal-body">Event Details: <input id="eventDescription"
+                            placeholder="Describe event here"></input></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="saveBtn" data-dismiss="modal">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
