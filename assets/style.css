@@ -44,26 +44,26 @@ main {
 }
 
 h1 {
-    font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 h2 {
-    font-size: 20px;
-    margin-top: 30px;
-    font-style: italic;
+  font-size: 20px;
+  margin-top: 30px;
+  font-style: italic;
 }
 
 #gray-column {
-  background-color: #A9A9A9;
+  background-color: #a9a9a9;
 }
 
 #red-column {
-  background-color: #DC143C;
+  background-color: #dc143c;
 }
 
 #green-column {
-  background-color: #32CD32;
+  background-color: #32cd32;
 }
 
 .sections {
@@ -80,4 +80,11 @@ h2 {
 
 .email {
   color: black;
+}
+
+@media screen and (max-width: 680px) {
+  #color-legend {
+    font-size: 15px;
+    height: 10px;
+  }
 }
