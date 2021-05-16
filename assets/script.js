@@ -4,15 +4,13 @@ function liveTime() {
 setInterval(liveTime, 1000);
 
 function setLocalStorage(objKey, objValue) {
-  var dailySchedule = JSON.parse(localStorage.getItem("dailySchedule") || "{}");
+  var dailySchedule = JSON.parse(localStorage.getItem("yourSchedule") || "{}");
   dailySchedule[objKey] = objValue;
-  localStorage.setItem("dailySchedule", JSON.stringify(dailySchedule));
+  localStorage.setItem("yourSchedule", JSON.stringify(dailySchedule));
 }
 
 $(document).ready(function () {
-  var scheduledItems = JSON.parse(
-    localStorage.getItem("dailySchedule") || "{}"
-  );
+  var scheduledItems = JSON.parse(localStorage.getItem("yourSchedule") || "{}");
   var eventInfoItems = $(".eventInfo");
   $.each(eventInfoItems, function (index, object) {
     var object = $(object);
@@ -76,5 +74,15 @@ $("#saveBtn").click(function () {
       object.html(eventInformation);
       setLocalStorage(dataAttribute, eventInformation);
     }
+  });
+});
+
+$("#clearScheduleBtn").click(function () {
+  var scheduledStuff = JSON.parse(localStorage.getItem("yourSchedule") || "{}");
+  var scheduledStuff = {};
+  localStorage.setItem("yourSchedule", JSON.stringify(scheduledStuff));
+  $(".eventInfo").each(function (i, object) {
+    var object = $(object);
+    object.html("");
   });
 });

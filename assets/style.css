@@ -69,3 +69,15 @@ h2 {
 .sections {
   margin-top: 50px;
 }
+
+#clear {
+  text-align: center;
+}
+
+.foot {
+  text-align: center;
+}
+
+.email {
+  color: black;
+}
